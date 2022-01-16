@@ -19,7 +19,7 @@ app.use('/', Route);
 
 const username = process.env.DB_USERNAME;
 const password = process.env.DB_PASSWORD;
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3030;
 
 Connection(username, password);
 

@@ -32,14 +32,24 @@ const InfoHeader = () => {
     const appleStore = 'https://assets.inshorts.com/website_assets/images/appstore.png';
     const googleStore = 'https://assets.inshorts.com/website_assets/images/playstore.png';
 
+    const darkTheme = () => {
+        document.body.style.backgroundColor = "black";
+    }
+
+    const lightTheme = () => {
+        document.body.style.backgroundColor = "white";
+    }
+
     return (
         <Box className={classes.container}>
             <Typography className={classes.text}>
                 For the best experience use <b>Live News</b> app on your smartphone
             </Typography>
             <Box style={{ marginLeft: 'auto' }}>
-                <img src={appleStore} alt="apple store" className={classes.logo} />
-                <img src={googleStore} alt="google store" className={classes.logo} />
+                <button className={classes.logo} onClick={darkTheme}>Dark</button>
+                <button className={classes.logo} onClick={lightTheme}>Light</button>
+                {/* <img src={appleStore} alt="apple store"  />
+                <img src={googleStore} alt="google store" className={classes.logo} /> */}
             </Box>
         </Box>
     )
