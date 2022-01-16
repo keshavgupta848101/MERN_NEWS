@@ -10,14 +10,40 @@ const useStyles = makeStyles(theme => ({
         height: 48,
         marginBottom: 30,
         [theme.breakpoints.down('md')]: {
-            display: 'none'
+            height: 80,
+            borderRadius: "2px"
+            // display: 'none'
         }
     },
-    logo: {
+    button: {
         height: 34,
+        border: "none",
+        width: "60px",
+        background: "black",
+        color: "white",
+        border: "2px solid gray",
         '&:last-child': {
             margin: '0 50px 0 20px'
-        }
+        },
+        fontFamily: "sans-serif",
+        [theme.breakpoints.down('md')]: {
+            margin: "5px",
+            // padding: "5px",
+
+            '&:first-child': {
+                margin: '0 0px 5px 0px',
+                color: 'white',
+                width: "58px",
+
+            },
+            '&:last-child': {
+                margin: '0 0px 0 0px',
+                color: 'white',
+                width: "58px",
+
+            }
+        },
+
     },
     text: {
         fontSize: 14,
@@ -25,6 +51,7 @@ const useStyles = makeStyles(theme => ({
         marginLeft: 50,
         fontFamily: "'Roboto',sans-serif",
     }
+
 }))
 
 const InfoHeader = () => {
@@ -46,8 +73,8 @@ const InfoHeader = () => {
                 For the best experience use <b>Live News</b> app on your smartphone
             </Typography>
             <Box style={{ marginLeft: 'auto' }}>
-                <button className={classes.logo} onClick={darkTheme}>Dark</button>
-                <button className={classes.logo} onClick={lightTheme}>Light</button>
+                <button className={classes.button} onClick={darkTheme}>Dark &#9789;</button>
+                <button className={classes.button} onClick={lightTheme}>Light&#9728;</button>
                 {/* <img src={appleStore} alt="apple store"  />
                 <img src={googleStore} alt="google store" className={classes.logo} /> */}
             </Box>
